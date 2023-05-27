@@ -46,6 +46,6 @@ KuraKani is a fantastic, single-person project that brings you a fully open-sour
 
 **On-Device Models** iOS hardware is highly capable, and if there is enough demand or once I get my hands on the new iPhone, I plan to incorporate support for the Alpaca and LLaMa models. This means increased power and versatility, allowing you to have even more engaging and personalized conversations.
 
-#### 💵 How are you planning to monitize this app?
+#### 💵 How are you planning to monetize this app?
 
 **That's the neat part** _i don't_
