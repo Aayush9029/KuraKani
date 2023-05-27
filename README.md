@@ -1,7 +1,8 @@
 > **Warning** : Work In Progress, KuraKani for iOS is currently in development phase and not yet ready for use. Check back later, contributions are welcome.
 
 <p align="center">
-  <img src="https://github.com/Aayush9029/KuraKani/assets/43297314/0ca58d05-e026-4fc4-94c5-32652b627836" height="128">
+
+  <img src="https://github.com/Aayush9029/KuraKani/assets/43297314/f9842405-c6e3-48bd-affc-a687e3661653" height="128">
   <h1 align="center">KuraKani</h1>
 </p>
 
@@ -21,7 +22,7 @@
 
 KuraKani is a fantastic, single-person project that brings you a fully open-source and free ChatGPT app for iOS. It all started because I, as the creator, found myself bored and wanted to embark on an exciting new endeavor. The incredible support I received from the community for my previous open-source projects and the cups of coffee bought for me encouraged me to create something truly special.
 
-![Github Banner](https://github.com/Aayush9029/KuraKani/assets/43297314/b57bbf7b-b9c4-426b-a831-cfdd82cbf3b4)
+![Github Banner](https://github.com/Aayush9029/KuraKani/assets/43297314/0518ba74-fcb2-4567-a694-fc5e7780c1ef)
 
 ---
 
