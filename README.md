@@ -20,7 +20,7 @@
   </a>
 </p>
 
-KuraKani is a fantastic, free and fully open-source ChatGPT app for iOS. The incredible support Boredom and cups of coffee, which amazing people bought for me *for my previous opensource projects*, motivated me to create an open-source version of this app.
+KuraKani is a fantastic, free and fully open-source ChatGPT app for iOS. Boredom and cups of coffee, which amazing people bought for me *for my previous opensource projects*, motivated me to create an open-source version of this app.
 
 ![Github Banner](https://github.com/Aayush9029/KuraKani/assets/43297314/0518ba74-fcb2-4567-a694-fc5e7780c1ef)
 
