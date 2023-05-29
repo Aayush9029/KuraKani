@@ -5,33 +5,18 @@
 //  Created by Aayush Pokharel on 2023-05-26.
 //
 
+import KeychainSwift
+import OpenAI
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.idProviderValue) var idProvider
+    @StateObject var chatVM: ChatViewModel = .init()
+    
     var body: some View {
-        NavigationStack {
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                }
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, world!")
-                Spacer()
-            }
-            .padding()
-            .toolbar {
-                NavigationLink {
-                    SettingsView()
-                } label: {
-                    Label("Settings", systemImage: "gear")
-                }
-            }
-        }
-        .preferredColorScheme(.dark)
-        .background(Color.backgroundColor)
+        ChatView(store: self.chatVM)
+            .preferredColorScheme(.dark)
+            .background(Color.backgroundColor)
     }
 }
 

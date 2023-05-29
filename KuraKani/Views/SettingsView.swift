@@ -5,18 +5,19 @@
 //  Created by Aayush Pokharel on 2023-05-26.
 //
 
+import Colorful
 import Defaults
-import FluidGradient
 import KeychainSwift
 import Setting
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var chatVM: ChatViewModel
     @Environment(\.openURL) var openURL
     @Default(.haptic) var haptic
     @Default(.crashReport) var crashReport
-    @Default(.saveChatHistory) var saveChatHistory
-    @Default(.chatHistory) var chatHistory
+    @Default(.saveConversation) var saveConversation
+    @Default(.conversations) var conversations
 
     @State private var confirmDelete: Bool = false
     @State private var apiKey: String = ""
@@ -24,98 +25,21 @@ struct SettingsView: View {
     var body: some View {
         SettingStack {
             SettingPage(title: "KuraKani Settings") {
-                SettingCustomView(titleForSearch: "API Usage") {
-                    VStack {
-                        HStack {
-                            Spacer()
-                            Text("$0.092")
-                                .bold()
-                                .font(.largeTitle)
-                            Spacer()
-                        }
-                        Text("API Usage this month")
-                            .foregroundStyle(.secondary)
-                    }
-                    .padding()
-                    .background(
-                        FluidGradient(blobs: [
-                            .green, .teal, .red,
-                        ],
-                        highlights: [.yellow, .orange, .purple],
-                        speed: 0.85,
-                        blur: 0.75)
-                    )
-                    .cornerRadius(12)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(.quaternary, lineWidth: 2)
-                    )
-                    .padding(.horizontal)
-                }
-                SettingGroup(header: "API Token") {
-                    SettingCustomView(
-                        id: "App.Tokens",
-                        titleForSearch: "API Key"
-                    ) {
-                        VStack(alignment: .leading) {
-                            Label("OpenAPI Key", systemImage: "key.fill")
-                            SecureField("OpenAI API Ke1y",
-                                        text: $apiKey)
-                                .autocorrectionDisabled()
-                                .textCase(.none)
-                            Button("Save") {
-                                KeychainSwift().setAPIKey(apiKey)
-                            }
-                        }
-                        .padding()
-                        .onAppear {
-                            if let key = KeychainSwift().getAPIKey() {
-                                apiKey = key
-                            }
-                        }
-                    }
+                SettingCustomView {
+                    VStack {}
+                        .padding(.top)
                 }
 
-                SettingGroup(header: "Chat") {
-                    SettingCustomView(
-                        id: "app.haptics",
-                        titleForSearch: "Haptics"
-                    ) {
-                        LabeledToggle(
-                            "Use haptics",
-                            symbol: haptic ? "water.waves" : "water.waves.slash",
-                            value: $haptic
-                        )
-                    }
-                    SettingCustomView(
-                        id: "chat.history",
-                        titleForSearch: "Chat History"
-                    ) {
-                        LabeledToggle(
-                            "Save Chat History",
-                            symbol: saveChatHistory ? "text.badge.plus" : "text.badge.minus",
-                            value: $saveChatHistory
-                        )
+                if KeychainSwift().hasAPIKey() {
+                    MonthlyUsageCost
+                }
 
-                        if saveChatHistory {
-                            Button(role: .destructive) {
-                                confirmDelete.toggle()
-                            } label: {
-                                Label("Delete Chat History", systemImage: "trash")
-                            }
-                            .padding()
-                            .disabled(chatHistory.chats.isEmpty)
-                        }
-                    }
-                }
-                SettingGroup(header: "Telemetry") {
-                    SettingCustomView(
-                        id: "telemetry.crashreport",
-                        titleForSearch: "Report"
-                    ) {
-                        LabeledToggle("Send Crash Report", symbol: "exclamationmark.triangle", value: $crashReport)
-                    }
-                }
+                OpenAiAPIKey
+
+                ChatInfo
+
+                TelemetryInfo
+
                 SettingGroup(header: "Other") {
                     SettingButton(title: "Github Repository") {
                         openURL(
@@ -135,8 +59,8 @@ struct SettingsView: View {
                 }
             }
         }
+        .environment(\.settingBackgroundColor, .backgroundColor)
         .preferredColorScheme(.dark)
-
         .alert(isPresented: $confirmDelete) {
             Alert(
                 title: Text("Delete Chat History"),
@@ -146,6 +70,117 @@ struct SettingsView: View {
                 },
                 secondaryButton: .cancel()
             )
+        }
+    }
+
+    var MonthlyUsageCost: SettingCustomView {
+        SettingCustomView(titleForSearch: "API Usage") {
+            VStack {
+                HStack {
+                    Spacer()
+                    Text("$0.092")
+                        .bold()
+                        .font(.largeTitle)
+                    Spacer()
+                }
+                Text("API Usage this month")
+                    .foregroundStyle(.secondary)
+            }
+            .padding()
+            .background(
+                ColorfulView()
+            )
+            .cornerRadius(12)
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(.quaternary, lineWidth: 2)
+            )
+            .padding(.horizontal)
+        }
+    }
+
+    var OpenAiAPIKey: SettingGroup {
+        SettingGroup(header: "API Token") {
+            SettingCustomView(
+                id: "App.Tokens",
+                titleForSearch: "API Key"
+            ) {
+                VStack(alignment: .leading) {
+                    Label("OpenAPI Key", systemImage: "key.fill")
+                    SecureField("Your API Key for OpenAI",
+                                text: $apiKey)
+                        .autocorrectionDisabled()
+                        .textCase(.none)
+
+                    Button("Save") {
+                        KeychainSwift().setAPIKey(apiKey)
+                        chatVM.refreshClient()
+                    }
+                    .disabled(apiKey.isEmpty)
+                    .frame(maxWidth: .infinity)
+                    .padding(8)
+                    .background(.gray.opacity(apiKey.isEmpty ? 0.125 : 0.5))
+                    .cornerRadius(12)
+                    .buttonStyle(.plain)
+                }
+                .padding()
+                .onAppear {
+                    if let key = KeychainSwift().getAPIKey() {
+                        apiKey = key
+                    }
+                }
+            }
+        }
+    }
+
+    var ChatInfo: SettingGroup {
+        SettingGroup(header: "Chat") {
+            SettingCustomView(
+                id: "app.haptics",
+                titleForSearch: "Haptics"
+            ) {
+                LabeledToggle(
+                    "Use haptics",
+                    symbol: haptic ? "water.waves" : "water.waves.slash",
+                    value: $haptic
+                )
+            }
+            SettingCustomView(
+                id: "chat.history",
+                titleForSearch: "Chat History"
+            ) {
+                LabeledToggle(
+                    "Save Chat History",
+                    symbol: saveConversation ? "text.badge.plus" : "text.badge.minus",
+                    value: $saveConversation
+                )
+
+                if saveConversation {
+                    Button(role: .destructive) {
+                        confirmDelete.toggle()
+                    } label: {
+                        Label(
+                            conversations.messages.isEmpty ?
+                                "Chat History is Empty" :
+                                "Delete Chat History",
+                            systemImage: "trash"
+                        )
+                    }
+                    .padding()
+                    .disabled(conversations.messages.isEmpty)
+                }
+            }
+        }
+    }
+
+    var TelemetryInfo: SettingGroup {
+        SettingGroup(header: "Telemetry") {
+            SettingCustomView(
+                id: "telemetry.crashreport",
+                titleForSearch: "Report"
+            ) {
+                LabeledToggle("Send Crash Report", symbol: "exclamationmark.triangle", value: $crashReport)
+            }
         }
     }
 }

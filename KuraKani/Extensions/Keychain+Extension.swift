@@ -22,4 +22,8 @@ extension KeychainSwift {
     func resetAPIKey() {
         KeychainSwift.keychain.delete(KeychainSwift.apiKeyIdentifier)
     }
+
+    func hasAPIKey() -> Bool {
+        return getAPIKey() != nil
+    }
 }

@@ -18,10 +18,16 @@
 		4545B8B62A21ADCC00160571 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8B52A21ADCC00160571 /* SplashScreenView.swift */; };
 		4545B8B92A21AE0F00160571 /* Setting in Frameworks */ = {isa = PBXBuildFile; productRef = 4545B8B82A21AE0F00160571 /* Setting */; };
 		4545B8BC2A21AE1B00160571 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 4545B8BB2A21AE1B00160571 /* Defaults */; };
-		4545B8BF2A21AE2200160571 /* FluidGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 4545B8BE2A21AE2200160571 /* FluidGradient */; };
 		4545B8C22A21AE5300160571 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8C12A21AE5300160571 /* ChatModel.swift */; };
 		45A8B6782A245A27006D3668 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 45A8B6772A245A27006D3668 /* KeychainSwift */; };
 		45A8B67A2A245A33006D3668 /* Keychain+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B6792A245A33006D3668 /* Keychain+Extension.swift */; };
+		45A8B67D2A245E30006D3668 /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 45A8B67C2A245E30006D3668 /* Colorful */; };
+		45A8B6802A247977006D3668 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B67F2A247977006D3668 /* ChatViewModel.swift */; };
+		45A8B68B2A247DB8006D3668 /* IDProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B6892A247DB1006D3668 /* IDProvider.swift */; };
+		45A8B68C2A247DB8006D3668 /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B68A2A247DB2006D3668 /* DateProvider.swift */; };
+		45A8B6902A247EF0006D3668 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B68F2A247EF0006D3668 /* ChatView.swift */; };
+		45A8B6912A247EF0006D3668 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B68D2A247EF0006D3668 /* DetailView.swift */; };
+		45A8B6922A247EF0006D3668 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B68E2A247EF0006D3668 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		4545B8B52A21ADCC00160571 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		4545B8C12A21AE5300160571 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		45A8B6792A245A33006D3668 /* Keychain+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+Extension.swift"; sourceTree = "<group>"; };
+		45A8B67F2A247977006D3668 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		45A8B6892A247DB1006D3668 /* IDProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDProvider.swift; sourceTree = "<group>"; };
+		45A8B68A2A247DB2006D3668 /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
+		45A8B68D2A247EF0006D3668 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		45A8B68E2A247EF0006D3668 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		45A8B68F2A247EF0006D3668 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4545B8BC2A21AE1B00160571 /* Defaults in Frameworks */,
-				4545B8BF2A21AE2200160571 /* FluidGradient in Frameworks */,
+				45A8B67D2A245E30006D3668 /* Colorful in Frameworks */,
 				45A8B6782A245A27006D3668 /* KeychainSwift in Frameworks */,
 				45283BA12A234FB600B7B01E /* OpenAI in Frameworks */,
 				4545B8B92A21AE0F00160571 /* Setting in Frameworks */,
@@ -75,9 +87,11 @@
 			children = (
 				4545B89E2A21AD8600160571 /* KuraKaniApp.swift */,
 				4545B8A02A21AD8600160571 /* ContentView.swift */,
-				4545B8AE2A21ADA400160571 /* Extensions */,
 				4545B8AD2A21ADA100160571 /* Views */,
+				45A8B67E2A24796C006D3668 /* ViewModels */,
+				4545B8AE2A21ADA400160571 /* Extensions */,
 				4545B8AC2A21AD9E00160571 /* Models */,
+				45A8B6882A247DA2006D3668 /* Environments */,
 				4545B8A22A21AD8700160571 /* Assets.xcassets */,
 				4545B8A42A21AD8700160571 /* Preview Content */,
 			);
@@ -103,6 +117,9 @@
 		4545B8AD2A21ADA100160571 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45A8B68F2A247EF0006D3668 /* ChatView.swift */,
+				45A8B68D2A247EF0006D3668 /* DetailView.swift */,
+				45A8B68E2A247EF0006D3668 /* ListView.swift */,
 				4545B8B32A21ADC500160571 /* SettingsView.swift */,
 				4545B8B52A21ADCC00160571 /* SplashScreenView.swift */,
 			);
@@ -117,6 +134,23 @@
 				45A8B6792A245A33006D3668 /* Keychain+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		45A8B67E2A24796C006D3668 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				45A8B67F2A247977006D3668 /* ChatViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		45A8B6882A247DA2006D3668 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				45A8B68A2A247DB2006D3668 /* DateProvider.swift */,
+				45A8B6892A247DB1006D3668 /* IDProvider.swift */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +173,9 @@
 			packageProductDependencies = (
 				4545B8B82A21AE0F00160571 /* Setting */,
 				4545B8BB2A21AE1B00160571 /* Defaults */,
-				4545B8BE2A21AE2200160571 /* FluidGradient */,
 				45283BA02A234FB600B7B01E /* OpenAI */,
 				45A8B6772A245A27006D3668 /* KeychainSwift */,
+				45A8B67C2A245E30006D3668 /* Colorful */,
 			);
 			productName = KuraKani;
 			productReference = 4545B89B2A21AD8600160571 /* KuraKani.app */;
@@ -174,9 +208,9 @@
 			packageReferences = (
 				4545B8B72A21AE0F00160571 /* XCRemoteSwiftPackageReference "Setting" */,
 				4545B8BA2A21AE1B00160571 /* XCRemoteSwiftPackageReference "Defaults" */,
-				4545B8BD2A21AE2200160571 /* XCRemoteSwiftPackageReference "FluidGradient" */,
 				45283B9F2A234FB600B7B01E /* XCRemoteSwiftPackageReference "OpenAI" */,
 				45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				45A8B67B2A245E30006D3668 /* XCRemoteSwiftPackageReference "Colorful" */,
 			);
 			productRefGroup = 4545B89C2A21AD8600160571 /* Products */;
 			projectDirPath = "";
@@ -230,10 +264,16 @@
 				4545B8A12A21AD8600160571 /* ContentView.swift in Sources */,
 				4545B89F2A21AD8600160571 /* KuraKaniApp.swift in Sources */,
 				4545B8C22A21AE5300160571 /* ChatModel.swift in Sources */,
+				45A8B6902A247EF0006D3668 /* ChatView.swift in Sources */,
 				4545B8B02A21ADB400160571 /* Assets+Extension.swift in Sources */,
 				4545B8B22A21ADBB00160571 /* Defaults+Extensions.swift in Sources */,
+				45A8B6912A247EF0006D3668 /* DetailView.swift in Sources */,
 				4545B8B62A21ADCC00160571 /* SplashScreenView.swift in Sources */,
+				45A8B6802A247977006D3668 /* ChatViewModel.swift in Sources */,
+				45A8B6922A247EF0006D3668 /* ListView.swift in Sources */,
+				45A8B68B2A247DB8006D3668 /* IDProvider.swift in Sources */,
 				45A8B67A2A245A33006D3668 /* Keychain+Extension.swift in Sources */,
+				45A8B68C2A247DB8006D3668 /* DateProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,20 +500,20 @@
 				kind = branch;
 			};
 		};
-		4545B8BD2A21AE2200160571 /* XCRemoteSwiftPackageReference "FluidGradient" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Cindori/FluidGradient.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 20.0.0;
+			};
+		};
+		45A8B67B2A245E30006D3668 /* XCRemoteSwiftPackageReference "Colorful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/Colorful.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -494,15 +534,15 @@
 			package = 4545B8BA2A21AE1B00160571 /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
 		};
-		4545B8BE2A21AE2200160571 /* FluidGradient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4545B8BD2A21AE2200160571 /* XCRemoteSwiftPackageReference "FluidGradient" */;
-			productName = FluidGradient;
-		};
 		45A8B6772A245A27006D3668 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		45A8B67C2A245E30006D3668 /* Colorful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45A8B67B2A245E30006D3668 /* XCRemoteSwiftPackageReference "Colorful" */;
+			productName = Colorful;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,32 +7,27 @@
 
 import Defaults
 import Foundation
+import OpenAI
 
-enum ChatRole {
-    case user
-    case assistant
-    case system
-}
-
-struct ChatModel {
+struct Message {
     var id: String
-    var role: ChatRole
+    var role: Chat.Role
     var content: String
     var createdAt: Date
 
-    static let example: ChatModel = .init(
+    static let example: Message = .init(
         id: UUID().uuidString,
-        role: .system,
+        role: Chat.Role.system,
         content: "Hello World!",
         createdAt: .now
     )
 }
 
-struct AllChats {
+struct Conversation {
     let id: String
-    var chats: [ChatModel]
+    var messages: [Message]
 }
 
-extension ChatRole: Codable, Defaults.Serializable {}
-extension ChatModel: Codable, Identifiable, Defaults.Serializable {}
-extension AllChats: Codable, Identifiable, Defaults.Serializable {}
+extension Chat.Role: Defaults.Serializable {}
+extension Message: Equatable, Codable, Identifiable, Defaults.Serializable {}
+extension Conversation: Equatable, Codable, Identifiable, Defaults.Serializable {}

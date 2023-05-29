@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct KuraKaniApp: App {
-    @State private var showCover: Bool = true
+    @State private var showCover: Bool = false
     var body: some Scene {
         WindowGroup {
             ContentView()
