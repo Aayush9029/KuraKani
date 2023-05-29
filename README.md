@@ -1,4 +1,4 @@
-> **Warning** : Work In Progress, KuraKani for iOS is currently in development phase and not yet ready for use. Check back later, contributions are welcome.
+> **Warning** : Work In Progress, KuraKani for iOS is currently in alpha release + development phase and not yet ready for use. Either compile the app yourself or check back later for beta release.
 
 <p align="center">
 
