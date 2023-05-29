@@ -7,6 +7,7 @@
 
 import Defaults
 import FluidGradient
+import KeychainSwift
 import Setting
 import SwiftUI
 
@@ -18,6 +19,7 @@ struct SettingsView: View {
     @Default(.chatHistory) var chatHistory
 
     @State private var confirmDelete: Bool = false
+    @State private var apiKey: String = ""
 
     var body: some View {
         SettingStack {
@@ -36,10 +38,12 @@ struct SettingsView: View {
                     }
                     .padding()
                     .background(
-                        FluidGradient(blobs: [.green, .teal, .red],
-                                      highlights: [.yellow, .orange, .purple],
-                                      speed: 0.85,
-                                      blur: 0.75)
+                        FluidGradient(blobs: [
+                            .green, .teal, .red,
+                        ],
+                        highlights: [.yellow, .orange, .purple],
+                        speed: 0.85,
+                        blur: 0.75)
                     )
                     .cornerRadius(12)
                     .overlay(
@@ -56,11 +60,19 @@ struct SettingsView: View {
                         VStack(alignment: .leading) {
                             Label("OpenAPI Key", systemImage: "key.fill")
                             SecureField("OpenAI API Ke1y",
-                                        text: .constant("a12323ss231323d"))
+                                        text: $apiKey)
                                 .autocorrectionDisabled()
                                 .textCase(.none)
+                            Button("Save") {
+                                KeychainSwift().setAPIKey(apiKey)
+                            }
                         }
                         .padding()
+                        .onAppear {
+                            if let key = KeychainSwift().getAPIKey() {
+                                apiKey = key
+                            }
+                        }
                     }
                 }
 
@@ -130,7 +142,7 @@ struct SettingsView: View {
                 title: Text("Delete Chat History"),
                 message: Text("Are you sure you want to delete all chat history?"),
                 primaryButton: .destructive(Text("Delete All")) {
-                    chatHistory.chats = []
+                    Defaults.clearHistory()
                 },
                 secondaryButton: .cancel()
             )

@@ -8,24 +8,31 @@
 import Defaults
 import Foundation
 
-enum ChatUser: Codable, Defaults.Serializable {
+enum ChatRole {
     case user
-    case gpt
-    case app
+    case assistant
+    case system
 }
 
-struct ChatModel: Codable, Defaults.Serializable {
-    let time: Date
-    let message: String
-    let user: ChatUser
+struct ChatModel {
+    var id: String
+    var role: ChatRole
+    var content: String
+    var createdAt: Date
 
     static let example: ChatModel = .init(
-        time: .now,
-        message: "Hello World!",
-        user: .app
+        id: UUID().uuidString,
+        role: .system,
+        content: "Hello World!",
+        createdAt: .now
     )
 }
 
-struct AllChats: Codable, Defaults.Serializable {
+struct AllChats {
+    let id: String
     var chats: [ChatModel]
 }
+
+extension ChatRole: Codable, Defaults.Serializable {}
+extension ChatModel: Codable, Identifiable, Defaults.Serializable {}
+extension AllChats: Codable, Identifiable, Defaults.Serializable {}

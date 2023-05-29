@@ -12,5 +12,11 @@ extension Defaults.Keys {
     static let haptic = Key<Bool>("HAPTIC", default: true)
     static let crashReport = Key<Bool>("SENDCRASHREPORT", default: false)
     static let saveChatHistory = Key<Bool>("SAVECHATHISTORY", default: false)
-    static let chatHistory = Key<AllChats>("CHATHISTORY", default: .init(chats: []))
+    static let chatHistory = Key<AllChats>("CHATHISTORY", default: .init(id: "", chats: []))
+}
+
+extension Defaults {
+    static func clearHistory() {
+        Default(.chatHistory).reset()
+    }
 }

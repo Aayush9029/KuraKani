@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45283BA12A234FB600B7B01E /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 45283BA02A234FB600B7B01E /* OpenAI */; };
 		4545B89F2A21AD8600160571 /* KuraKaniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B89E2A21AD8600160571 /* KuraKaniApp.swift */; };
 		4545B8A12A21AD8600160571 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8A02A21AD8600160571 /* ContentView.swift */; };
 		4545B8A32A21AD8700160571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4545B8A22A21AD8700160571 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 		4545B8BC2A21AE1B00160571 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 4545B8BB2A21AE1B00160571 /* Defaults */; };
 		4545B8BF2A21AE2200160571 /* FluidGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 4545B8BE2A21AE2200160571 /* FluidGradient */; };
 		4545B8C22A21AE5300160571 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8C12A21AE5300160571 /* ChatModel.swift */; };
+		45A8B6782A245A27006D3668 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 45A8B6772A245A27006D3668 /* KeychainSwift */; };
+		45A8B67A2A245A33006D3668 /* Keychain+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B6792A245A33006D3668 /* Keychain+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,7 @@
 		4545B8B32A21ADC500160571 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4545B8B52A21ADCC00160571 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		4545B8C12A21AE5300160571 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		45A8B6792A245A33006D3668 /* Keychain+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 			files = (
 				4545B8BC2A21AE1B00160571 /* Defaults in Frameworks */,
 				4545B8BF2A21AE2200160571 /* FluidGradient in Frameworks */,
+				45A8B6782A245A27006D3668 /* KeychainSwift in Frameworks */,
+				45283BA12A234FB600B7B01E /* OpenAI in Frameworks */,
 				4545B8B92A21AE0F00160571 /* Setting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +114,7 @@
 			children = (
 				4545B8AF2A21ADB400160571 /* Assets+Extension.swift */,
 				4545B8B12A21ADBB00160571 /* Defaults+Extensions.swift */,
+				45A8B6792A245A33006D3668 /* Keychain+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -133,6 +140,8 @@
 				4545B8B82A21AE0F00160571 /* Setting */,
 				4545B8BB2A21AE1B00160571 /* Defaults */,
 				4545B8BE2A21AE2200160571 /* FluidGradient */,
+				45283BA02A234FB600B7B01E /* OpenAI */,
+				45A8B6772A245A27006D3668 /* KeychainSwift */,
 			);
 			productName = KuraKani;
 			productReference = 4545B89B2A21AD8600160571 /* KuraKani.app */;
@@ -166,6 +175,8 @@
 				4545B8B72A21AE0F00160571 /* XCRemoteSwiftPackageReference "Setting" */,
 				4545B8BA2A21AE1B00160571 /* XCRemoteSwiftPackageReference "Defaults" */,
 				4545B8BD2A21AE2200160571 /* XCRemoteSwiftPackageReference "FluidGradient" */,
+				45283B9F2A234FB600B7B01E /* XCRemoteSwiftPackageReference "OpenAI" */,
+				45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 4545B89C2A21AD8600160571 /* Products */;
 			projectDirPath = "";
@@ -222,6 +233,7 @@
 				4545B8B02A21ADB400160571 /* Assets+Extension.swift in Sources */,
 				4545B8B22A21ADBB00160571 /* Defaults+Extensions.swift in Sources */,
 				4545B8B62A21ADCC00160571 /* SplashScreenView.swift in Sources */,
+				45A8B67A2A245A33006D3668 /* Keychain+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +436,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		45283B9F2A234FB600B7B01E /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
 		4545B8B72A21AE0F00160571 /* XCRemoteSwiftPackageReference "Setting" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/aheze/Setting.git";
@@ -448,9 +468,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		45283BA02A234FB600B7B01E /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45283B9F2A234FB600B7B01E /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
 		4545B8B82A21AE0F00160571 /* Setting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4545B8B72A21AE0F00160571 /* XCRemoteSwiftPackageReference "Setting" */;
@@ -465,6 +498,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4545B8BD2A21AE2200160571 /* XCRemoteSwiftPackageReference "FluidGradient" */;
 			productName = FluidGradient;
+		};
+		45A8B6772A245A27006D3668 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
