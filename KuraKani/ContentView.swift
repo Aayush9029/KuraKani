@@ -2,28 +2,60 @@
 //  ContentView.swift
 //  KuraKani
 //
-//  Created by Aayush Pokharel on 2023-05-26.
+//  Created by Aayush Pokharel on 2023-07-09.
 //
 
-import KeychainSwift
-import OpenAI
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.idProviderValue) var idProvider
-    @StateObject var chatVM: ChatViewModel = .init()
-    
+    @State private var selectedPersona: SinglePersona?
+    @State private var selectedChats: Chats?
     var body: some View {
-        ChatView(store: self.chatVM)
-            .preferredColorScheme(.dark)
-            .background(Color.backgroundColor)
+        NavigationSplitView {
+            ScrollView {
+                VStack {
+                    ForEach(SinglePersona.examplePersonas) { persona in
+                        NavigationLink {
+                            PersonaDetails(persona: persona)
+                        } label: {
+                            SinglePersonaRow(persona: persona)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding()
+            }
+            .navigationTitle("Kura Kani")
+        } content: {
+            if let selectedPersona {
+                PersonaDetails(persona: selectedPersona)
+            } else {
+                ContentUnavailableView(
+                    "Select a persona",
+                    systemImage: "person",
+                    description: Text(
+                        "Select a persona to view"
+                    )
+                )
+            }
+        } detail: {
+            if let selectedChats {
+                ChatsRow(chats: selectedChats)
+            } else {
+                ContentUnavailableView(
+                    "Select a chat",
+                    systemImage: "message",
+                    description: Text(
+                        "Select a chat to view"
+                    )
+                )
+            }
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            ContentView()
-        }
-    }
+#Preview {
+    ContentView()
+        .preferredColorScheme(.dark)
 }

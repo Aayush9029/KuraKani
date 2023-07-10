@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         VStack {
             Spacer()
-            Image.kurakani
+            Image(.kurakani)
                 .resizable()
                 .scaledToFit()
+                .colorInvert()
                 .frame(width: 128)
+                .colorInvert(colorScheme == .dark)
 
             Text("KuraKani")
-                .font(.largeTitle.bold())
+                .fontDesign(.serif)
+                .font(.largeTitle)
 
             Spacer()
-            Text("Completely free and opensource.")
+            Text("Completely free and open-source.")
                 .foregroundStyle(.secondary)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.backgroundColor)
     }
 }
 

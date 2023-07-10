@@ -7,196 +7,171 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45283BA12A234FB600B7B01E /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 45283BA02A234FB600B7B01E /* OpenAI */; };
-		4545B89F2A21AD8600160571 /* KuraKaniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B89E2A21AD8600160571 /* KuraKaniApp.swift */; };
-		4545B8A12A21AD8600160571 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8A02A21AD8600160571 /* ContentView.swift */; };
-		4545B8A32A21AD8700160571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4545B8A22A21AD8700160571 /* Assets.xcassets */; };
-		4545B8A62A21AD8700160571 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4545B8A52A21AD8700160571 /* Preview Assets.xcassets */; };
-		4545B8B02A21ADB400160571 /* Assets+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8AF2A21ADB400160571 /* Assets+Extension.swift */; };
-		4545B8B22A21ADBB00160571 /* Defaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8B12A21ADBB00160571 /* Defaults+Extensions.swift */; };
-		4545B8B42A21ADC500160571 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8B32A21ADC500160571 /* SettingsView.swift */; };
-		4545B8B62A21ADCC00160571 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8B52A21ADCC00160571 /* SplashScreenView.swift */; };
-		4545B8B92A21AE0F00160571 /* Setting in Frameworks */ = {isa = PBXBuildFile; productRef = 4545B8B82A21AE0F00160571 /* Setting */; };
-		4545B8BC2A21AE1B00160571 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 4545B8BB2A21AE1B00160571 /* Defaults */; };
-		4545B8C22A21AE5300160571 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545B8C12A21AE5300160571 /* ChatModel.swift */; };
-		45A8B6782A245A27006D3668 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 45A8B6772A245A27006D3668 /* KeychainSwift */; };
-		45A8B67A2A245A33006D3668 /* Keychain+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B6792A245A33006D3668 /* Keychain+Extension.swift */; };
-		45A8B67D2A245E30006D3668 /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 45A8B67C2A245E30006D3668 /* Colorful */; };
-		45A8B6802A247977006D3668 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B67F2A247977006D3668 /* ChatViewModel.swift */; };
-		45A8B68B2A247DB8006D3668 /* IDProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B6892A247DB1006D3668 /* IDProvider.swift */; };
-		45A8B68C2A247DB8006D3668 /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B68A2A247DB2006D3668 /* DateProvider.swift */; };
-		45A8B6902A247EF0006D3668 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B68F2A247EF0006D3668 /* ChatView.swift */; };
-		45A8B6912A247EF0006D3668 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B68D2A247EF0006D3668 /* DetailView.swift */; };
-		45A8B6922A247EF0006D3668 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8B68E2A247EF0006D3668 /* ListView.swift */; };
+		459496FF2A5BACDC001E0E63 /* KuraKaniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459496FE2A5BACDC001E0E63 /* KuraKaniApp.swift */; };
+		459497032A5BACDC001E0E63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459497022A5BACDC001E0E63 /* ContentView.swift */; };
+		459497052A5BACDD001E0E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459497042A5BACDD001E0E63 /* Assets.xcassets */; };
+		459497092A5BACDD001E0E63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459497082A5BACDD001E0E63 /* Preview Assets.xcassets */; };
+		459497172A5BB245001E0E63 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459497162A5BB210001E0E63 /* SplashScreenView.swift */; };
+		459497192A5BB314001E0E63 /* ColorInvertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459497182A5BB314001E0E63 /* ColorInvertModifier.swift */; };
+		459497202A5BB8BD001E0E63 /* SinglePersonaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594971F2A5BB8BD001E0E63 /* SinglePersonaRow.swift */; };
+		459497222A5BB8D1001E0E63 /* SinglePersona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459497212A5BB8D1001E0E63 /* SinglePersona.swift */; };
+		459497252A5BBFCE001E0E63 /* PersonaDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459497242A5BBFCE001E0E63 /* PersonaDetails.swift */; };
+		459497272A5BC5A3001E0E63 /* ChatsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459497262A5BC5A3001E0E63 /* ChatsRow.swift */; };
+		459497292A5BC765001E0E63 /* ChatDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459497282A5BC765001E0E63 /* ChatDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4545B89B2A21AD8600160571 /* KuraKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuraKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4545B89E2A21AD8600160571 /* KuraKaniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuraKaniApp.swift; sourceTree = "<group>"; };
-		4545B8A02A21AD8600160571 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4545B8A22A21AD8700160571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4545B8A52A21AD8700160571 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4545B8AF2A21ADB400160571 /* Assets+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Extension.swift"; sourceTree = "<group>"; };
-		4545B8B12A21ADBB00160571 /* Defaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Extensions.swift"; sourceTree = "<group>"; };
-		4545B8B32A21ADC500160571 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		4545B8B52A21ADCC00160571 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		4545B8C12A21AE5300160571 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
-		45A8B6792A245A33006D3668 /* Keychain+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+Extension.swift"; sourceTree = "<group>"; };
-		45A8B67F2A247977006D3668 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		45A8B6892A247DB1006D3668 /* IDProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDProvider.swift; sourceTree = "<group>"; };
-		45A8B68A2A247DB2006D3668 /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
-		45A8B68D2A247EF0006D3668 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		45A8B68E2A247EF0006D3668 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		45A8B68F2A247EF0006D3668 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		459496FB2A5BACDC001E0E63 /* KuraKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuraKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		459496FE2A5BACDC001E0E63 /* KuraKaniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuraKaniApp.swift; sourceTree = "<group>"; };
+		459497022A5BACDC001E0E63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		459497042A5BACDD001E0E63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		459497062A5BACDD001E0E63 /* KuraKani.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KuraKani.entitlements; sourceTree = "<group>"; };
+		459497082A5BACDD001E0E63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4594970F2A5BB118001E0E63 /* Keychain+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Keychain+Extension.swift"; path = "../Keychain+Extension.swift"; sourceTree = "<group>"; };
+		459497132A5BB1E7001E0E63 /* Defaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Extensions.swift"; sourceTree = "<group>"; };
+		459497142A5BB1E7001E0E63 /* Keychain+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+Extension.swift"; sourceTree = "<group>"; };
+		459497162A5BB210001E0E63 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		459497182A5BB314001E0E63 /* ColorInvertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInvertModifier.swift; sourceTree = "<group>"; };
+		4594971F2A5BB8BD001E0E63 /* SinglePersonaRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePersonaRow.swift; sourceTree = "<group>"; };
+		459497212A5BB8D1001E0E63 /* SinglePersona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePersona.swift; sourceTree = "<group>"; };
+		459497242A5BBFCE001E0E63 /* PersonaDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaDetails.swift; sourceTree = "<group>"; };
+		459497262A5BC5A3001E0E63 /* ChatsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsRow.swift; sourceTree = "<group>"; };
+		459497282A5BC765001E0E63 /* ChatDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4545B8982A21AD8600160571 /* Frameworks */ = {
+		459496F82A5BACDC001E0E63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4545B8BC2A21AE1B00160571 /* Defaults in Frameworks */,
-				45A8B67D2A245E30006D3668 /* Colorful in Frameworks */,
-				45A8B6782A245A27006D3668 /* KeychainSwift in Frameworks */,
-				45283BA12A234FB600B7B01E /* OpenAI in Frameworks */,
-				4545B8B92A21AE0F00160571 /* Setting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4545B8922A21AD8600160571 = {
+		459496F22A5BACDC001E0E63 = {
 			isa = PBXGroup;
 			children = (
-				4545B89D2A21AD8600160571 /* KuraKani */,
-				4545B89C2A21AD8600160571 /* Products */,
+				459496FD2A5BACDC001E0E63 /* KuraKani */,
+				459496FC2A5BACDC001E0E63 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4545B89C2A21AD8600160571 /* Products */ = {
+		459496FC2A5BACDC001E0E63 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4545B89B2A21AD8600160571 /* KuraKani.app */,
+				459496FB2A5BACDC001E0E63 /* KuraKani.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4545B89D2A21AD8600160571 /* KuraKani */ = {
+		459496FD2A5BACDC001E0E63 /* KuraKani */ = {
 			isa = PBXGroup;
 			children = (
-				4545B89E2A21AD8600160571 /* KuraKaniApp.swift */,
-				4545B8A02A21AD8600160571 /* ContentView.swift */,
-				4545B8AD2A21ADA100160571 /* Views */,
-				45A8B67E2A24796C006D3668 /* ViewModels */,
-				4545B8AE2A21ADA400160571 /* Extensions */,
-				4545B8AC2A21AD9E00160571 /* Models */,
-				45A8B6882A247DA2006D3668 /* Environments */,
-				4545B8A22A21AD8700160571 /* Assets.xcassets */,
-				4545B8A42A21AD8700160571 /* Preview Content */,
+				459496FE2A5BACDC001E0E63 /* KuraKaniApp.swift */,
+				459497022A5BACDC001E0E63 /* ContentView.swift */,
+				459497152A5BB209001E0E63 /* Views */,
+				4594971B2A5BB58D001E0E63 /* Models */,
+				4594971A2A5BB4AB001E0E63 /* ViewModifiers */,
+				459497112A5BB1E7001E0E63 /* Extensions */,
+				459497042A5BACDD001E0E63 /* Assets.xcassets */,
+				459497062A5BACDD001E0E63 /* KuraKani.entitlements */,
+				459497072A5BACDD001E0E63 /* Preview Content */,
 			);
 			path = KuraKani;
 			sourceTree = "<group>";
 		};
-		4545B8A42A21AD8700160571 /* Preview Content */ = {
+		459497072A5BACDD001E0E63 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4545B8A52A21AD8700160571 /* Preview Assets.xcassets */,
+				459497082A5BACDD001E0E63 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4545B8AC2A21AD9E00160571 /* Models */ = {
+		459497112A5BB1E7001E0E63 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4545B8C12A21AE5300160571 /* ChatModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		4545B8AD2A21ADA100160571 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				45A8B68F2A247EF0006D3668 /* ChatView.swift */,
-				45A8B68D2A247EF0006D3668 /* DetailView.swift */,
-				45A8B68E2A247EF0006D3668 /* ListView.swift */,
-				4545B8B32A21ADC500160571 /* SettingsView.swift */,
-				4545B8B52A21ADCC00160571 /* SplashScreenView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		4545B8AE2A21ADA400160571 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4545B8AF2A21ADB400160571 /* Assets+Extension.swift */,
-				4545B8B12A21ADBB00160571 /* Defaults+Extensions.swift */,
-				45A8B6792A245A33006D3668 /* Keychain+Extension.swift */,
+				4594970F2A5BB118001E0E63 /* Keychain+Extension.swift */,
+				459497132A5BB1E7001E0E63 /* Defaults+Extensions.swift */,
+				459497142A5BB1E7001E0E63 /* Keychain+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		45A8B67E2A24796C006D3668 /* ViewModels */ = {
+		459497152A5BB209001E0E63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				45A8B67F2A247977006D3668 /* ChatViewModel.swift */,
+				4594971C2A5BB5C2001E0E63 /* SubViews */,
+				4594971F2A5BB8BD001E0E63 /* SinglePersonaRow.swift */,
+				459497242A5BBFCE001E0E63 /* PersonaDetails.swift */,
+				459497262A5BC5A3001E0E63 /* ChatsRow.swift */,
+				459497282A5BC765001E0E63 /* ChatDetail.swift */,
 			);
-			path = ViewModels;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		45A8B6882A247DA2006D3668 /* Environments */ = {
+		4594971A2A5BB4AB001E0E63 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				45A8B68A2A247DB2006D3668 /* DateProvider.swift */,
-				45A8B6892A247DB1006D3668 /* IDProvider.swift */,
+				459497182A5BB314001E0E63 /* ColorInvertModifier.swift */,
 			);
-			path = Environments;
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		4594971B2A5BB58D001E0E63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				459497212A5BB8D1001E0E63 /* SinglePersona.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4594971C2A5BB5C2001E0E63 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				459497162A5BB210001E0E63 /* SplashScreenView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4545B89A2A21AD8600160571 /* KuraKani */ = {
+		459496FA2A5BACDC001E0E63 /* KuraKani */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4545B8A92A21AD8700160571 /* Build configuration list for PBXNativeTarget "KuraKani" */;
+			buildConfigurationList = 4594970C2A5BACDD001E0E63 /* Build configuration list for PBXNativeTarget "KuraKani" */;
 			buildPhases = (
-				4545B8972A21AD8600160571 /* Sources */,
-				4545B8982A21AD8600160571 /* Frameworks */,
-				4545B8992A21AD8600160571 /* Resources */,
-				4545B8C02A21AE2900160571 /* Comments Highlighter Xcode */,
+				459496F72A5BACDC001E0E63 /* Sources */,
+				459496F82A5BACDC001E0E63 /* Frameworks */,
+				459496F92A5BACDC001E0E63 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = KuraKani;
-			packageProductDependencies = (
-				4545B8B82A21AE0F00160571 /* Setting */,
-				4545B8BB2A21AE1B00160571 /* Defaults */,
-				45283BA02A234FB600B7B01E /* OpenAI */,
-				45A8B6772A245A27006D3668 /* KeychainSwift */,
-				45A8B67C2A245E30006D3668 /* Colorful */,
-			);
 			productName = KuraKani;
-			productReference = 4545B89B2A21AD8600160571 /* KuraKani.app */;
+			productReference = 459496FB2A5BACDC001E0E63 /* KuraKani.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4545B8932A21AD8600160571 /* Project object */ = {
+		459496F32A5BACDC001E0E63 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					4545B89A2A21AD8600160571 = {
-						CreatedOnToolsVersion = 14.3;
+					459496FA2A5BACDC001E0E63 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 4545B8962A21AD8600160571 /* Build configuration list for PBXProject "KuraKani" */;
+			buildConfigurationList = 459496F62A5BACDC001E0E63 /* Build configuration list for PBXProject "KuraKani" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -204,86 +179,53 @@
 				en,
 				Base,
 			);
-			mainGroup = 4545B8922A21AD8600160571;
-			packageReferences = (
-				4545B8B72A21AE0F00160571 /* XCRemoteSwiftPackageReference "Setting" */,
-				4545B8BA2A21AE1B00160571 /* XCRemoteSwiftPackageReference "Defaults" */,
-				45283B9F2A234FB600B7B01E /* XCRemoteSwiftPackageReference "OpenAI" */,
-				45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */,
-				45A8B67B2A245E30006D3668 /* XCRemoteSwiftPackageReference "Colorful" */,
-			);
-			productRefGroup = 4545B89C2A21AD8600160571 /* Products */;
+			mainGroup = 459496F22A5BACDC001E0E63;
+			productRefGroup = 459496FC2A5BACDC001E0E63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4545B89A2A21AD8600160571 /* KuraKani */,
+				459496FA2A5BACDC001E0E63 /* KuraKani */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4545B8992A21AD8600160571 /* Resources */ = {
+		459496F92A5BACDC001E0E63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4545B8A62A21AD8700160571 /* Preview Assets.xcassets in Resources */,
-				4545B8A32A21AD8700160571 /* Assets.xcassets in Resources */,
+				459497092A5BACDD001E0E63 /* Preview Assets.xcassets in Resources */,
+				459497052A5BACDD001E0E63 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4545B8C02A21AE2900160571 /* Comments Highlighter Xcode */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Comments Highlighter Xcode";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "TAGS=\"TODO:|FIXME:|WARNING:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"| perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4545B8972A21AD8600160571 /* Sources */ = {
+		459496F72A5BACDC001E0E63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4545B8B42A21ADC500160571 /* SettingsView.swift in Sources */,
-				4545B8A12A21AD8600160571 /* ContentView.swift in Sources */,
-				4545B89F2A21AD8600160571 /* KuraKaniApp.swift in Sources */,
-				4545B8C22A21AE5300160571 /* ChatModel.swift in Sources */,
-				45A8B6902A247EF0006D3668 /* ChatView.swift in Sources */,
-				4545B8B02A21ADB400160571 /* Assets+Extension.swift in Sources */,
-				4545B8B22A21ADBB00160571 /* Defaults+Extensions.swift in Sources */,
-				45A8B6912A247EF0006D3668 /* DetailView.swift in Sources */,
-				4545B8B62A21ADCC00160571 /* SplashScreenView.swift in Sources */,
-				45A8B6802A247977006D3668 /* ChatViewModel.swift in Sources */,
-				45A8B6922A247EF0006D3668 /* ListView.swift in Sources */,
-				45A8B68B2A247DB8006D3668 /* IDProvider.swift in Sources */,
-				45A8B67A2A245A33006D3668 /* Keychain+Extension.swift in Sources */,
-				45A8B68C2A247DB8006D3668 /* DateProvider.swift in Sources */,
+				459497252A5BBFCE001E0E63 /* PersonaDetails.swift in Sources */,
+				459497292A5BC765001E0E63 /* ChatDetail.swift in Sources */,
+				459496FF2A5BACDC001E0E63 /* KuraKaniApp.swift in Sources */,
+				459497032A5BACDC001E0E63 /* ContentView.swift in Sources */,
+				459497192A5BB314001E0E63 /* ColorInvertModifier.swift in Sources */,
+				459497272A5BC5A3001E0E63 /* ChatsRow.swift in Sources */,
+				459497202A5BB8BD001E0E63 /* SinglePersonaRow.swift in Sources */,
+				459497222A5BB8D1001E0E63 /* SinglePersona.swift in Sources */,
+				459497172A5BB245001E0E63 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4545B8A72A21AD8700160571 /* Debug */ = {
+		4594970A2A5BACDD001E0E63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -316,7 +258,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -330,20 +273,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		4545B8A82A21AD8700160571 /* Release */ = {
+		4594970B2A5BACDD001E0E63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -376,7 +319,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -384,68 +328,83 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4545B8AA2A21AD8700160571 /* Debug */ = {
+		4594970D2A5BACDD001E0E63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KuraKani/KuraKani.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KuraKani/Preview Content\"";
 				DEVELOPMENT_TEAM = 4538W4A79B;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aayush.opensource.KuraKani;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayush.commercial.KuraKani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4545B8AB2A21AD8700160571 /* Release */ = {
+		4594970E2A5BACDD001E0E63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KuraKani/KuraKani.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KuraKani/Preview Content\"";
 				DEVELOPMENT_TEAM = 4538W4A79B;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aayush.opensource.KuraKani;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayush.commercial.KuraKani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,96 +414,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4545B8962A21AD8600160571 /* Build configuration list for PBXProject "KuraKani" */ = {
+		459496F62A5BACDC001E0E63 /* Build configuration list for PBXProject "KuraKani" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4545B8A72A21AD8700160571 /* Debug */,
-				4545B8A82A21AD8700160571 /* Release */,
+				4594970A2A5BACDD001E0E63 /* Debug */,
+				4594970B2A5BACDD001E0E63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4545B8A92A21AD8700160571 /* Build configuration list for PBXNativeTarget "KuraKani" */ = {
+		4594970C2A5BACDD001E0E63 /* Build configuration list for PBXNativeTarget "KuraKani" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4545B8AA2A21AD8700160571 /* Debug */,
-				4545B8AB2A21AD8700160571 /* Release */,
+				4594970D2A5BACDD001E0E63 /* Debug */,
+				4594970E2A5BACDD001E0E63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		45283B9F2A234FB600B7B01E /* XCRemoteSwiftPackageReference "OpenAI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.1;
-			};
-		};
-		4545B8B72A21AE0F00160571 /* XCRemoteSwiftPackageReference "Setting" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/aheze/Setting.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		4545B8BA2A21AE1B00160571 /* XCRemoteSwiftPackageReference "Defaults" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/Defaults.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 20.0.0;
-			};
-		};
-		45A8B67B2A245E30006D3668 /* XCRemoteSwiftPackageReference "Colorful" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Lakr233/Colorful.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		45283BA02A234FB600B7B01E /* OpenAI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 45283B9F2A234FB600B7B01E /* XCRemoteSwiftPackageReference "OpenAI" */;
-			productName = OpenAI;
-		};
-		4545B8B82A21AE0F00160571 /* Setting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4545B8B72A21AE0F00160571 /* XCRemoteSwiftPackageReference "Setting" */;
-			productName = Setting;
-		};
-		4545B8BB2A21AE1B00160571 /* Defaults */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4545B8BA2A21AE1B00160571 /* XCRemoteSwiftPackageReference "Defaults" */;
-			productName = Defaults;
-		};
-		45A8B6772A245A27006D3668 /* KeychainSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 45A8B6762A245A27006D3668 /* XCRemoteSwiftPackageReference "keychain-swift" */;
-			productName = KeychainSwift;
-		};
-		45A8B67C2A245E30006D3668 /* Colorful */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 45A8B67B2A245E30006D3668 /* XCRemoteSwiftPackageReference "Colorful" */;
-			productName = Colorful;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 4545B8932A21AD8600160571 /* Project object */;
+	rootObject = 459496F32A5BACDC001E0E63 /* Project object */;
 }
