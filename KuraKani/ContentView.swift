@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             ScrollView {
-                VStack {
+                VStack(alignment: .leading) {
                     ForEach(SinglePersona.examplePersonas) { persona in
                         NavigationLink {
                             PersonaDetails(persona: persona)
@@ -26,7 +26,7 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Kura Kani")
+            .navigationTitle("KuraKani")
         } content: {
             if let selectedPersona {
                 PersonaDetails(persona: selectedPersona)

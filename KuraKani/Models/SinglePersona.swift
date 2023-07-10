@@ -85,17 +85,20 @@ class Chats {
     static let exampleChats: [Chats] = [
         Chats(title: "Chat 1", singleChats: [
             SingleChat("Hello!", role: .human),
+            SingleChat("Hi There", role: .computer),
             SingleChat("How are you?", role: .human),
-            SingleChat("What's new?", role: .human),
             SingleChat("I'm doing well, thanks!", role: .computer),
+            SingleChat("What's new?", role: .human),
             SingleChat("Not much, just working on a project.", role: .computer)
         ]),
         Chats(title: "Chat 2", singleChats: [
             SingleChat("Hey there!", role: .human),
-            SingleChat("I'm doing well, thanks.", role: .human),
+            SingleChat("Yoo! What are you doing?.", role: .computer),
             SingleChat("Not much, just working on a project.", role: .human),
-            SingleChat("How can I assist you?", role: .computer),
-            SingleChat("Let me know if you have any questions.", role: .computer)
+            SingleChat("You need help?", role: .computer),
+            SingleChat("Let me know if you have any questions.", role: .computer),
+            SingleChat("hello?", role: .computer),
+            SingleChat("talk to me human.", role: .computer)
         ])
     ]
 }
@@ -105,6 +108,18 @@ class SingleChat {
     var id: UUID = .init()
     var text: String = ""
     var role: ChatRole = .computer
+
+    var isHuman: Bool {
+        role == .human
+    }
+
+    var isComputer: Bool {
+        role == .computer
+    }
+
+    var color: Color {
+        role == .computer ? .red : .blue
+    }
 
     init(_ text: String, role: ChatRole) {
         self.id = UUID()
